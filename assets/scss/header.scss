@@ -1,0 +1,46 @@
+header{
+    margin: 0;
+    padding: 0;
+    // height: 10%;
+    height: auto;
+    width: 100%;
+    background-color: #222221;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    #logo-container{
+        margin-left: 10px;
+    }
+
+    #authLink-container{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row;
+        margin-right: 3px;
+
+        ul{
+            list-style: none;
+
+            li{
+                display: inline-block;
+                margin: 0px 5px 2px 3px;
+                font-weight: 300;
+                font-size: 1.2rem;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    color: orange;
+                }
+            }
+            
+        }
+    }
+}

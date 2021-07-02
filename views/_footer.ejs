@@ -1,3 +1,24 @@
 <footer>
-    Page Footer
+    
+    <div id="copyright-container">
+        <p>
+            © Harshit Garg. 
+        </p>
+        <p>
+            All Rights Reserved
+        </p>
+    </div>
+
+    <div id="link-container">
+        <ul>
+            <% if (locals.user) {%>
+                <li>
+                    <a href="/users/profile"> Profile </a>
+                </li>
+                <li>
+                    <a href="/users/sign-out"> Home </a>
+                </li>
+            <% }%>
+    </div>
+
 </footer>

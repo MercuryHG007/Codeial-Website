@@ -1,46 +1,35 @@
-header{
-    margin: 0;
-    padding: 0;
-    // height: 10%;
-    height: auto;
-    width: 100%;
-    background-color: #222221;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    
-    #logo-container{
-        margin-left: 10px;
-    }
-
-    #authLink-container{
+#layout-header{
+    nav{
         display: flex;
         justify-content: space-between;
-        align-content: center;
-        flex-direction: row;
-        margin-right: 3px;
+        padding: 0 10px;
+        background: #2196f3;
+        color: white;
+        box-shadow: 1px 1px 1px 1px lightgrey;
 
-        ul{
-            list-style: none;
+        .mini-logo{
+            p{
+                margin: 5px;
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+        }
 
-            li{
-                display: inline-block;
-                margin: 0px 5px 2px 3px;
-                font-weight: 300;
-                font-size: 1.2rem;
-
-                a{
-                    color: white;
-                    text-decoration: none;
-                }
-
-                a:hover{
-                    color: orange;
+        .auth-links{
+            ul{
+                margin: 5% 5px;
+                display: flex;
+                list-style: none;
+                li{
+                    margin-right: 10px;
                 }
             }
-            
         }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
     }
 }

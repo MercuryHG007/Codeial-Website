@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-
+// Render user's profile
 module.exports.profile = function(req, res){
     User.findById(req.params.id, function(err,user){
         return res.render('user_profile', {
@@ -11,6 +11,28 @@ module.exports.profile = function(req, res){
     
 }
 
+// update the user profile
+module.exports.update = function(req,res){
+    if(req.user.id == req.params.id){
+        User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+            return res.redirect('back');
+        });
+    }
+    else{
+        return res.status(401).send('Unauthorized');
+    }
+}
+
+// module.exports.delete = function(req,res){
+//     if(req.user.id == req.params.id){
+//         User.findById(req.params.id, function(err,post){
+
+//         })
+//     }
+//     else{
+//         return res.status(401).send('Unauthorized');
+//     }
+// }
 
 // render the sign up page
 module.exports.signUp = function(req, res){
@@ -23,7 +45,6 @@ module.exports.signUp = function(req, res){
         title: "Codeial | Sign Up"
     })
 }
-
 
 // render the sign in page
 module.exports.signIn = function(req, res){
@@ -64,6 +85,7 @@ module.exports.createSession = function(req, res){
     return res.redirect('/');
 }
 
+// sign out from session
 module.exports.destroySession = function(req, res){
     req.logout();
 

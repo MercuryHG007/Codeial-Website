@@ -11,6 +11,7 @@ const session = require('express-session');
 // used for authentication
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
+const passportJWT = require('./config/passport-jwt-strategy');
 
 // used for db
 const MongoStore = require('connect-mongo')(session);

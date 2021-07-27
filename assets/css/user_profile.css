@@ -1,2 +1,4 @@
 body {
   background-color: lightblue; }
+  body form {
+    margin: 30px; }

@@ -8,6 +8,8 @@
         box-shadow: 1px 1px 1px 1px lightgrey;
 
         .mini-logo{
+            display: flex;
+            align-items: center;
             p{
                 margin: 5px;
                 font-size: 1.4rem;
@@ -22,6 +24,12 @@
                 list-style: none;
                 li{
                     margin-right: 10px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 1.8rem;
+                        border-radius: 50%;
+                    }
                 }
             }
         }

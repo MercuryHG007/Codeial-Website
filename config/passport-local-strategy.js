@@ -26,8 +26,6 @@ passport.use(new LocalStrategy({
             return done(null, user);
         });
     }
-
-
 ));
 
 
@@ -35,8 +33,6 @@ passport.use(new LocalStrategy({
 passport.serializeUser(function(user, done){
     done(null, user.id);
 });
-
-
 
 // deserializing the user from the key in the cookies
 passport.deserializeUser(function(id, done){

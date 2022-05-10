@@ -109,6 +109,5 @@ module.exports.destroySession = function(req, res){
     req.logout();
     req.flash('success', 'Logged Out Successfully!');
 
-
     return res.redirect('/');
 }
